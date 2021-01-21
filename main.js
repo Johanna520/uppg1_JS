@@ -11,5 +11,8 @@
    över 100 titlar ej ok
    https://www.w3schools.com/js/js_errors.asp  
 
+
+   gör så det ej går att ta minus på post. = felmeddelande
+   
    
 */

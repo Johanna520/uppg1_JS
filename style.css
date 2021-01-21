@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     font-family: 'Courier New', Courier, monospace;
+   
 }
 
 
@@ -11,39 +12,44 @@ header{
     top: 0;
     position: fixed;
     width: 100%;
-
+    height: 200px;
     color: whitesmoke;
-    background-color: rgb(30, 30, 63);
+    background-image: url(/IMAGE/header.jpg);
 
+    background-repeat: no-repeat;
+    background-size: cover;
     font-size: 32px;
    
 }
 
-main{
-       background-color: white;
+section{
+    
+
+       background-color: rgb(8, 8, 56);
        display: flex;
        flex-direction: column;
 
 }
 
-
-section{
-    margin: 120px auto;
+.title{
+    margin: 250px auto;
     max-width: 450px;
    
     padding: 10px;
 
-    background-color: rgb(176, 176, 216);
+    background-color: orangered;
     border: 1px solid  black;
 
     box-shadow: 15px 10px 8px rgb(145, 144, 144);
 }
-section h2{
+
+.title h2{
+    color:rgb(145, 144, 144);
     text-align: center;
     font-size: 26px;
   
 }
-section p{
+.title p{
     font-size: 20px;
 }
 
@@ -51,16 +57,17 @@ section p{
 nav{
     position: fixed;
     width: 15%;
-    margin-top: 120px;
+    max-height: 75%;
+    margin-top: 250px;
     margin-left: 10px;
     border:  1px solid black;
     font-size: 26px;
     padding: 10px;
+
+    background-color:  rgb(59, 59, 104) ;
 }
 
 footer{
-  
-   
     position: fixed;
     width: 100%;
     bottom: 0;
