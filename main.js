@@ -14,5 +14,7 @@
 
    gör så det ej går att ta minus på post. = felmeddelande
    
-   
+   använd const och let inte var!s
 */
+//för att lättare upptäcka buggar skriver jag:
+"use strict";

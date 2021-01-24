@@ -1,79 +1,74 @@
-*{
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,,800,900);
+
+* {
     padding: 0;
     margin: 0;
-    font-family: 'Courier New', Courier, monospace;
-   
-}
-
-
-header{
-    display: flex;
-    justify-content:space-evenly;
-    top: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  
+  header {
+    background-color: #666;
+    padding: 30px;
     position: fixed;
     width: 100%;
-    height: 200px;
-    color: whitesmoke;
-    background-image: url(/IMAGE/header.jpg);
-
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-size: 32px;
-   
-}
-
-section{
     
-
-       background-color: rgb(8, 8, 56);
-       display: flex;
-       flex-direction: column;
-
-}
-
-.title{
-    margin: 250px auto;
-    max-width: 450px;
-   
-    padding: 10px;
-
-    background-color: orangered;
-    border: 1px solid  black;
-
-    box-shadow: 15px 10px 8px rgb(145, 144, 144);
-}
-
-.title h2{
-    color:rgb(145, 144, 144);
     text-align: center;
-    font-size: 26px;
+    font-size: 35px;
+    color: white;
+    top: 0;
+  }
   
-}
-.title p{
-    font-size: 20px;
-}
-
-
-nav{
+  nav {
     position: fixed;
-    width: 15%;
-    max-height: 75%;
-    margin-top: 250px;
-    margin-left: 10px;
-    border:  1px solid black;
-    font-size: 26px;
-    padding: 10px;
+    float: left;
+    width: 20%;
+    margin-top: 162px;
+    height: 100%;
+    background: #ccc;
+    padding: 20px;
+  }
+  
+ 
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  article {
+    margin: 300px auto;
+    margin-bottom: 50px;
+    float:right;
+    padding: 30px;
+    width: 70%;
+    background-color: #f1f1f1;
 
-    background-color:  rgb(59, 59, 104) ;
-}
+    
+    background-color: whitesmoke;
+    border: 1px solid  orange;
 
-footer{
+    box-shadow: 15px 10px 8px rgb(231, 163, 73);
+  
+  }
+  /*
+
+  section::after {
+    content: "";
+    display: table;
+    clear: both;
+  }*/
+
+  footer {
     position: fixed;
     width: 100%;
     bottom: 0;
 
-    color: whitesmoke;
-    background-color: rgb(30, 30, 63);
-    font-size: 22px;
+    background-color: #777;
+    padding: 10px;
     text-align: center;
-}
+    color: white;
+  }
