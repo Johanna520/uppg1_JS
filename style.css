@@ -23,35 +23,58 @@
     top: 0;
   }
   
-  nav {
-    position: fixed;
-    float: left;
-    width: 20%;
-    margin-top: 162px;
-    height: 100%;
-    background: #ccc;
-    padding: 20px;
+  .dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
   }
   
- 
-  nav ul {
-    list-style-type: none;
-    padding: 0;
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  .show {display:block;}
+
+  section{
+    margin-top: 250px;
   }
   
   article {
-    margin: 300px auto;
-    margin-bottom: 50px;
-    float:right;
+    margin: 50px 25% 50px 25%;  
     padding: 30px;
-    width: 70%;
+
     background-color: #f1f1f1;
 
     
     background-color: whitesmoke;
-    border: 1px solid  orange;
-
-    box-shadow: 15px 10px 8px rgb(231, 163, 73);
+    border: 1px solid  black;
+       
   
   }
 

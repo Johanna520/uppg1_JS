@@ -24,6 +24,8 @@
           toggle between hiding and showing the dropdown content */
           //se föreläsning 15.30!!!
 
+  
+
           
           function myFunction() {
             document.getElementById("myDropdown").classList.toggle("show");
