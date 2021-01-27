@@ -20,27 +20,71 @@
 //https://www.w3schools.com/js/js_strict.asp
 
 "use strict";
-  /* When the user clicks on the button, 
-          toggle between hiding and showing the dropdown content */
-          //se föreläsning 15.30!!!
+{
 
+const button = document.getElementById("btn");
+
+const arkiv = document.getElementById("arkiv");
+
+arkiv.style.display = "none";
+
+button.addEventListener("click", function () {
+  if (arkiv.style.display == "none") {
+    arkiv.style.display = "block";
+  } else {
+    arkiv.style.display = "none";
+  }
+});
+}
+
+
+
+{
+  
+    let inputBox = document.querySelector("#input-number");
+  
+    inputBox.addEventListener("input", (event) => {
+      removeAllSections();
+      makeSections(parseInt(event.currentTarget.value));
+    });
+  
+  
+  let makeSections = (count) => {
+    for (var i = 0; i < count; i++) {
+      var parent = document.querySelector("main");
+  
+      var child = document.createElement("article");
+      var title = document.createElement("h1");
+      var blurb = document.createElement("p");
+  
+      title.innerText = "Title " + i;
+      blurb.innerText = `Skriv ditt blogginlägg.`;
+  
+      makeEditable(title);
+      makeEditable(blurb);
+  
+      child.append(title);
+      child.append(blurb);
+      parent.append(child);
+    }
+  };
+  
+  let removeAllSections = () => {
+    var test_sections = document.querySelectorAll("article");
+    for (var i = 0; i < test_sections.length; i++) {
+      test_sections[i].remove();
+    }
+  };
+  
+  let makeEditable = (elem) => {
+    elem.addEventListener("click", (event) => {
+      elem.contentEditable = true;
+      elem.focus();
+    });
+    elem.addEventListener("blur", (event) => {
+      elem.contentEditable = false;
+    });
+  };
   
 
-          
-          function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-          }
-          
-          // Close the dropdown if the user clicks outside of it
-          window.onclick = function(event) {
-            if (!event.target.matches('.dropbtn')) {
-              var dropdowns = document.getElementsByClassName("dropdown-content");
-              var i;
-              for (i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                  openDropdown.classList.remove('show');
-                }
-              }
-            }
-          }
+}
