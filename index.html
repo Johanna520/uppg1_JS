@@ -1,11 +1,10 @@
-<!--
-    TODO
-fixa header
-lägg i några testblogginlägg bara för att lösa CSS styling etc
-
-
-
+<!--TODO
+• Ha en /*block kommentar*/ på toppen av din JS kod där du beskriver vad du gjort för att felsöka/undvika buggar. Hänvisa gärna till länkarna nedan
+++Lägg // kommentarer i din kod på ställen där du uppdaterar/förändrar DOM. Beskriv vad du gör.
+++ // Kommenteraett ställe där du kör kod i samband med ett event. Vad händer, vad är det du gör?
 -->
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,8 +14,8 @@ lägg i några testblogginlägg bara för att lösa CSS styling etc
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
     
-    
-    <!--här lägger jag in all javascript-kod för att den ska köra i början lägger jag till en defur="true"-->
+    <!--
+    här lägger jag in all javascript-kod för att den ska köra i början lägger jag till en defur="true"SKRIV MER-->
     <script defer="true" src='main.js'></script>
 
 
@@ -27,42 +26,41 @@ lägg i några testblogginlägg bara för att lösa CSS styling etc
             <div class = "header-title">
                 <h2>Johanna</h2>
             </div>
-              <!--
-            <div class="post-nr">
-                <label for="input-number">Posts</label>   
-                <input id="input-number" type="number" placeholder="1-100">
-            </div>   -->
-            
-
-            <div class="dropdown">
-              <button id="btn">Arkiv</button>              
-               <ul id="arkiv">
-                 
-                  <li><a href="#">title</a></li>
-                  <li><a href="#">title</a></li>
-                  <li><a href="#">title</a></li>
-                
-                </ul>
+               
+            <nav>
+             <!-- <div class="dropdown">
+                <button id="btn">Arkiv</button>              
+                 <ul id="arkiv">
+                   
+                    <li><a href="#">title</a></li>
+                    <li><a href="#">title</a></li>
+                    <li><a href="#">title</a></li>
+                  
+                  </ul>
+                </div>-->
+                <div class="button-add">
+                  <button id="add">Add Posts</button>
+                  </div>
+    
+                       
+            <div class="button-delete">
+              <button id="delete">Delete Posts</button>
               </div>
-              <div class="button-add">
-                <button id="add">Add</button>
-                </div>
+            </nav>
 
         </header>
         
+   
         <main>
-          
-          <div class="button-delete">
-            <button id="delete">delete</button>
-            </div>
+     
           <!--
-            <textarea id="textarea" rows="5" cols="30" placeholder="Write something here..."></textarea>
+            <textarea id="textarea" placeholder="Write something here..."></textarea>
          -->
            
         
       </main>
         <footer>
-          <p>Footer</p>
+          <p></p>
         </footer>
      
         
