@@ -65,6 +65,15 @@
     margin-top: 250px;
   }
   
+#add{
+  background-color:  rgb(204, 18, 95);
+  color: white;
+  padding: 16px;
+  font-size: 10px;
+  border: 1px solid black;
+  cursor: pointer;
+
+}
   
   TEXTAREA {
       
@@ -75,7 +84,8 @@
 	box-sizing: border-box;
 	max-width: 100%;
 	padding: 0.5em 0.6em;
-	margin: 50px;  
+  margin: 50px;  
+  flex-direction: column;
 }
 
 

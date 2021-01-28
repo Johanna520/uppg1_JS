@@ -15,22 +15,21 @@
    gör så det ej går att ta minus på post. = felmeddelande
    
    använd const och let inte var!s
+
+   f12 för consolen för att förstå varför min JavaScritp inte fungerade. . 
 */
 
-//Jag använder "use script" för att enklare upptäcka buggar. Jag kan ex inte använda mig av odeklarerade variabler vid användandet av "use strict". "
+/*Jag använder "use script" för att enklare upptäcka buggar. 
+Jag kan ex inte använda mig av odeklarerade variabler vid användandet av "use strict". */
 
 "use strict";
 
 
-/*här har jag skrvit kod för min dropdown-button. 
-Jag skriver const för att  . . . 
-Jag hämtar första objektet med id "btn" samt id "arkiv".
-
-*/
+/*Dropdown-button. */
 
 {
 
-const button = document.getElementById("btn");
+const button = document.getElementById("btn"); // 
 
 const arkiv = document.getElementById("arkiv");
 
@@ -47,15 +46,38 @@ button.addEventListener("click", function () {
 });
 }
 
+
+/*Add-button
+
+*/
+
 {
+
+
+
 const addButton = document.getElementById("add");
 
 
-addButton.addEventListener("click", function (){
-    const x = document.createElement("TEXTAREA");
-  const t = document.createTextNode("Write something here....");
-  x.appendChild(t);
-  document.body.appendChild(x);
+addButton.addEventListener("click", function addTextBox (){
+    const x = document.createElement("TEXTAREA");   //    Jag skapar ett element, <textarea>.
+    x.setAttribute("id", "textbox") // Ger elementet ett ID. 
+
+
+  const t = document.createTextNode("Write something here...."); // Jag skapar text i textarean.
+  x.appendChild(t); // 
+  document.body.appendChild(x); //Lägger till  textarea till <body> 
 });
 
+
+}
+
+//Delete-button
+{
+const deleteButton = document.getElementById("delete");
+
+deleteButton.addEventListener("click", function deleteTextBox (){
+    const x = document.getElementById("textbox");  
+    x.remove();
+
+} );
 }
