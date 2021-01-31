@@ -17,7 +17,7 @@ https://www.w3schools.com/js/js_strict.asp
   - jag har aktiverat debbugging genom F12 och via consollen försökt förstå varför och vart i min kod fel uppstår.
 
 https://www.w3schools.com/js/js_best_practices.asp
-  - i min dropdown (som jag kommenterat ut) använder jag === istället för ==
+  - i min dropdown (som jag kommenterat ut) använder jag === istället för ==. 
   - jag undviker new
 */
 
@@ -32,9 +32,8 @@ förändrar jag och uppdaterar DOM genom att skapa och ta bort ett element. */
 
 {
 
-  /*Add-button
+  //Add-button
 
-*/
   const addButton = document.getElementById("add"); //jag hämtar min <button id="add">- element för att kunna förändra elementet
 
   addButton.addEventListener("click", function addTextBox (){ //genom addEdventListener kan jag tilldela eventet "click" tillsammans
@@ -62,24 +61,22 @@ förändrar jag och uppdaterar DOM genom att skapa och ta bort ett element. */
     
   const textArea = document.getElementById("textbox");  //För att hitta elelementet jag vill ta bort använder jag getELementbyId. 
                                                 //då jag gav elementet Textarea ett nytt Id(genon addAttribute) skriver jag textbox mellan (). 
-  textArea.remove();                            // därefter tilldelar jag remove()-metoden till elementet. 
+  textArea.remove();                            // därefter tilldelar jag remove()-metoden till elementet, dvs jag raderar det valda elementet. 
 });
 }
 
 
 
-{
-  //VARFÖR CONSOLE?
-  console.log("Hej på dig");
-}
 
 
 
-
-/*Dropdown-button. 
-OBS! vet inte riktigt vad jag ska använda den till.
+/*Dropdown-button.  
+OBS!! vet inte riktigt vad jag ska använda den till.
 Men testade lite, ev kan den, när den är klar, användas till
 att klicka in på olika kategotier/inlägg.
+
+
+
 {
 
 const button = document.getElementById("btn"); // 
