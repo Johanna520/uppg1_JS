@@ -4,7 +4,7 @@ Vad jag gjort för att felsöka/undvika buggar:
 https://www.w3schools.com/js/js_strict.asp
 - Jag använder "use script" för att skriva säkrare JavaScirpt-kod och en mer "ren" kod.
   Jag kan ex inte använda mig av odeklarerade variabler vid användandet av "use strict", det isåfall kommer att kastas ett fel,
-  däför är samtliga variabler i denna kod deklarerade med const.
+  däför är samtliga variabler i denna kod deklarerade med let. Let ändrar på beteendet mer likt c#. 
 
 
   https://www.w3schools.com/js/js_conventions.asp
@@ -17,8 +17,8 @@ https://www.w3schools.com/js/js_strict.asp
   - jag har aktiverat debbugging genom F12 och via consollen försökt förstå varför och vart i min kod fel uppstår.
 
 https://www.w3schools.com/js/js_best_practices.asp
-  - i min dropdown (som jag kommenterat ut) använder jag === istället för ==. 
-  - jag undviker new
+  - i min dropdown (som jag kommenterat ut) använder jag === istället för ==.
+
 */
 
 
@@ -34,18 +34,20 @@ förändrar jag och uppdaterar DOM genom att skapa och ta bort ett element. */
 
   //Add-button
 
-  const addButton = document.getElementById("add"); //jag hämtar min <button id="add">- element för att kunna förändra elementet
+  let addButton = document.getElementById("add"); //jag hämtar min <button id="add">- element för att kunna förändra elementet
 
   addButton.addEventListener("click", function addTextBox (){ //genom addEdventListener kan jag tilldela eventet "click" tillsammans
                                                               //med functionen. I detta fall vad som sker när användaren trycker på <button>.
 
-  const textArea = document.createElement("TEXTAREA");  //Jag skapar ett element (TEXTAREA) genom creatELement. 
+  let textArea = document.createElement("TEXTAREA");  //Jag skapar ett element (TEXTAREA) genom creatELement. 
   textArea.setAttribute("id", "textbox")  //Jag ger elementet ett attribut (id), settAttribute(id ="textbox").
 
 
-  const text = document.createTextNode("Write something here...."); //För att lägga text i min textarea gör jag en textNode ..
+  let text = document.createTextNode("Write something here...."); //För att lägga text i min textarea gör jag en textNode ..
   textArea.appendChild(text); //.. och lägger till texten i textarea.
   document.body.appendChild(textArea); //Därefter lägger jag till mitt nya element i <body>.
+
+  console.log("Finns variabel text" + text + "?" ); // finns variabeln "text" innuti funktionen {} ? - true, variabeln finns endast här inne. 
 });
 }
 
@@ -53,13 +55,13 @@ förändrar jag och uppdaterar DOM genom att skapa och ta bort ett element. */
 
 //Delete-button
 {
-  const deleteButton = document.getElementById("delete");//jag hämtar min <button id="delete">- element för att kunna förändra elementet
+  let deleteButton = document.getElementById("delete");//jag hämtar min <button id="delete">- element för att kunna förändra elementet
 
   deleteButton.addEventListener("click", function deleteTextBox (){//genom addEdventListener kan jag tilldela eventet "click" tillsammans
                                                                   //med functionen. I detta fall vad som sker när användaren trycker på <button>.
 
     
-  const textArea = document.getElementById("textbox");  //För att hitta elelementet jag vill ta bort använder jag getELementbyId. 
+  let textArea = document.getElementById("textbox");  //För att hitta elelementet jag vill ta bort använder jag getELementbyId. 
                                                 //då jag gav elementet Textarea ett nytt Id(genon addAttribute) skriver jag textbox mellan (). 
   textArea.remove();                            // därefter tilldelar jag remove()-metoden till elementet, dvs jag raderar det valda elementet. 
 });
@@ -67,7 +69,7 @@ förändrar jag och uppdaterar DOM genom att skapa och ta bort ett element. */
 
 
 
-
+console.log("Finns variabel text" + text + "?" ); //finns variabeln "Text" även utanför funktionen{} ? - false. variabeln är syns inte utanför {} och är inte delkarerad . detta sker pga att jag skrivit let före variabeln.
 
 
 /*Dropdown-button.  
